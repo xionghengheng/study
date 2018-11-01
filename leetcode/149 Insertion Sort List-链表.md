@@ -1,11 +1,3 @@
-原题链接：https://leetcode.com/problems/keyboard-row/
-
-### 题意
-
-给定一个字符串数组，要求返回数组中“仅仅使用美国键盘的一行就能敲出来”的字符串。
-
-输入输出举例:
-
 原题链接：https://leetcode.com/problems/insertion-sort-list/
 
 ### 题意
@@ -23,8 +15,6 @@ Output: 1->2->3->4
 Input: -1->5->3->4->0
 
 Output: -1->0->3->4->5
-
-你可以假设以下条件成立：可以多次使用键盘上的字母；你可以假设输入的字符串仅仅包含字母表中的字母。
 
 ### 思路
 
