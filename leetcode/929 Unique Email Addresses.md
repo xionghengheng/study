@@ -68,6 +68,7 @@ public:
     }
 };
 
+//测试用例
 int main()
 {
     vector<string> emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com", "a.+t+@leetcode.com", ".++@leetcode.com", "+.+.aa@leetcode.com", "@leetcode.com"};
