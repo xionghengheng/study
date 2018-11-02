@@ -121,4 +121,16 @@ public:
         return ret;
     }
 };
+
+//测试代码
+int main()
+{
+    vector<string> words = {"Hello", "Alaska", "Dad", "Peace", "Hppp", "H", ""};
+    Solution so;
+    vector<string> ret = so.findWords(words);
+    for (auto& item : ret)
+    {
+        std::cout << item << std::endl;
+    }
+}
 ```
