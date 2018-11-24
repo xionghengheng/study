@@ -4,7 +4,7 @@
 
 两段程序说明了：TCP链接的建立过程以及数据读写的流程，整个TCP三次握手建立链接的过程如图所示。
 
-![tcp](../image/tcp.png)
+![tcp](./image/tcp.png)
 
 
 
