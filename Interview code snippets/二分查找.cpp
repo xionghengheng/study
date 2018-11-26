@@ -17,6 +17,7 @@ int binarySerch(const vector<int>& arr, int target)
     return -1;
 }
 
+//二分查找-递归版本
 int binarySerchRecursion(const vector<int>& arr, int target, int begIdx, int endIdx)
 {
     int midIdx = (begIdx + endIdx) / 2;
@@ -39,7 +40,6 @@ int binarySerchRecursion(const vector<int>& arr, int target, int begIdx, int end
     return -1;
 }
 
-//二分查找-递归版本
 int binarySerch2(const vector<int>& arr, int target)
 {
     return binarySerchRecursion(arr, target, 0, (int)(arr.size() - 1));
