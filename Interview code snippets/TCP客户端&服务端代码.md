@@ -1,4 +1,6 @@
-参考自：https://github.com/shineyr/Socket和https://github.com/Jiavan/httpclient-cli/tree/master/src
+参考自：
+https://github.com/shineyr/Socket
+https://github.com/Jiavan/httpclient-cli/tree/master/src
 
 ### 简易TCP客户端/服务端通信程序
 
