@@ -31,17 +31,8 @@ offset：一般设为0，表示从文件头开始映射。
 
 ```c++
 int munmap(void *addr, size_t length);//该调用在进程地址空间中解除一个映射关系，addr是调用mmap()时返回的地址，length是映射区的大小。当映射关系解除后，对原来映射地址的访问将导致段错误发生。
-```
-
-```c++
- int msync(void *addr, size_t length, int flags);//进程在映射空间的对共享内容的改变并不直接写回到磁盘文件中，往往在调用munmap后才执行该操作。可以通过调用msync实现磁盘上文件内容与共享内存区的内容一致。
-```
-
- ```c
+int msync(void *addr, size_t length, int flags);//进程在映射空间的对共享内容的改变并不直接写回到磁盘文件中，往往在调用munmap后才执行该操作。可以通过调用msync实现磁盘上文件内容与共享内存区的内容一致。
 int ftruncate(int fd, off_t length);//调整fd所指的文件的大小到length
- ```
-
-```c
 int fstat(int fd, struct stat *buf); //获取fd所指的文件的详细信息
 ```
 
