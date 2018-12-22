@@ -9,3 +9,17 @@
 
 [面试题18 树的子结构-二叉树](https://github.com/xionghengheng/study/blob/master/sword2offer/18.%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84.md)
 
+[面试题19 镜像二叉树-二叉树](https://github.com/xionghengheng/study/blob/master/sword2offer/19.%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F.md)
+
+[面试题20 顺时针打印矩阵](https://github.com/xionghengheng/study/blob/master/sword2offer/20.%E9%A1%BA%E6%97%B6%E9%92%88%E6%89%93%E5%8D%B0%E7%9F%A9%E9%98%B5.md)
+
+# 总结
+
+## 递归通用思路
+
+递归代码简单清晰，由于使用较少，经常难以在实际中正常的使用递归，在做题过程中，发现递归思路都有一个统一的套路：
+
+* 首先，确认这道题能用递归去解，每一步求解步骤都是一样
+* 其次，找到递归结束条件（先使用最简单的输入，即可确认递归结束条件）
+* 再次，进行题目要求逻辑
+* 最后，将当次求解的结果和下一次递归的结果衔接起来
