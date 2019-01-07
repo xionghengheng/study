@@ -5,6 +5,10 @@ using namespace std;
 //二分查找-循环版本
 int binarySerch(const vector<int>& arr, int target)
 {
+    if (arr.size == 0)
+    {
+        return -1;
+    }
     int begIdx = 0;
     int endIdx = (int)(arr.size() - 1);
     while (begIdx <= endIdx)
@@ -20,11 +24,11 @@ int binarySerch(const vector<int>& arr, int target)
 //二分查找-递归版本
 int binarySerchRecursion(const vector<int>& arr, int target, int begIdx, int endIdx)
 {
-    int midIdx = (begIdx + endIdx) / 2;
     if (begIdx > endIdx)
     {
         return -1;
     }
+    int midIdx = (begIdx + endIdx) / 2;
     if (target > arr[midIdx])
     {
         return binarySerchRecursion(arr, target, midIdx + 1, endIdx);
@@ -42,6 +46,10 @@ int binarySerchRecursion(const vector<int>& arr, int target, int begIdx, int end
 
 int binarySerch2(const vector<int>& arr, int target)
 {
+    if (arr.size() == 0)
+    {
+        return -1;
+    }
     return binarySerchRecursion(arr, target, 0, (int)(arr.size() - 1));
 }
 
