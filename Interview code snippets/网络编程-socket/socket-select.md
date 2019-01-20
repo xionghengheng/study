@@ -32,7 +32,7 @@ int select(int maxfdp1, fd_set *readset, fd_set *writeset, fd_set *exceptset, co
 
 select服务执行流程图：
 
-![selcet流程图](../image/select.png)
+![select流程图](../image/select.png)
 
 
 上图流程可简化为：当用户进程调用select的时候，select会将需要监控的描述符集合拷贝到内核空间（假设监控的仅仅是socket可读），然后内核遍历自己监控的socket集合，挨个检查该socket集合是否有可读事件，遍历完所有的socket集合后，如果没有任何一个socket可读，那么select会使得用户进程进入睡眠。如果在timeout时间内某个socket上有数据可读或者等待超时，则调用select的用户进程会被唤醒，接下来select就是遍历监控的socket集合，挨个收集可读事件并返回给用户进程。
