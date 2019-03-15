@@ -51,6 +51,12 @@ EPOLLONESHOT：只监听一次事件，当监听完这次事件之后，如果�
 
 等待事件的产生，类似于select()调用。参数events用来从内核得到事件的集合，maxevents告之内核这个events有多大，这个maxevents的值不能大于创建epoll_create()时的size，参数timeout是超时时间（毫秒，0会立即返回，-1将不确定，也有说法说是永久阻塞）。该函数返回需要处理的事件数目，如返回0表示已超时。
 
+epfd：为epoll_create创建之后的句柄
+events：是一个返回值，返回值里存储了所有的读写事件
+max_events：当前需要监听的最大的socket句柄数
+time_out：超时等待时间。（毫秒，值为0则会立即返回，值为-1则会一直阻塞，值为任意正整数x，则表示等待x后返回）
+
+
 #### epoll工作模式选择
 
 epoll对文件描述符的操作有两种模式：LT（level trigger）和ET（edge trigger）。LT模式是默认模式，LT模式与ET模式的区别如下：
